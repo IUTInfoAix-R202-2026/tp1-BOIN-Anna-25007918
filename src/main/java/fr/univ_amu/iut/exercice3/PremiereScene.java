@@ -1,6 +1,9 @@
 package fr.univ_amu.iut.exercice3;
 
 import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 /**
@@ -26,6 +29,13 @@ public class PremiereScene extends Application {
     // 6. Afficher le Stage.
     //
     // Les imports nécessaires sont déjà dans la Javadoc ci-dessus.
+    BorderPane borderPane = new BorderPane();
+    Scene scene = new Scene(borderPane);
+    Label label = new Label();
+    label.setText("Bonjour, JavaFX !");
+    borderPane.setCenter(label);
+    primaryStage.setScene(scene);
+    primaryStage.show();
   }
 
   public static void main(String[] args) {
