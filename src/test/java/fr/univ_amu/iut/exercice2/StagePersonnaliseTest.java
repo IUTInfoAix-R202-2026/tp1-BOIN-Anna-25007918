@@ -4,7 +4,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.testfx.api.FxRobot;
@@ -26,7 +25,6 @@ class StagePersonnaliseTest {
     new StagePersonnalise().start(this.stage);
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void laFenetreEstVisible(FxRobot robot) {
     assertThat(stage.isShowing())
@@ -34,26 +32,22 @@ class StagePersonnaliseTest {
         .isTrue();
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void leTitreEstDefini(FxRobot robot) {
     assertThat(stage.getTitle()).isEqualTo("Ma fenêtre personnalisée");
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void lesDimensionsSontDefinies(FxRobot robot) {
     assertThat(stage.getWidth()).isEqualTo(500.0);
     assertThat(stage.getHeight()).isEqualTo(300.0);
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void laFenetreNestPasRedimensionnable(FxRobot robot) {
     assertThat(stage.isResizable()).isFalse();
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void leStyleEstUndecorated(FxRobot robot) {
     assertThat(stage.getStyle()).isEqualTo(StageStyle.UNDECORATED);
