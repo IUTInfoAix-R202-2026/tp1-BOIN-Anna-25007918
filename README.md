@@ -1,4 +1,3 @@
-[![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=23732575)
 # <img src="https://raw.githubusercontent.com/IUTInfoAix-R510/Syllabus/main/assets/logo.png" alt="class logo" class="logo"/> R2.02 - Développement d'applications avec IHM
 
 ### IUT d'Aix-Marseille - Département Informatique Aix-en-Provence
@@ -240,8 +239,6 @@ Ouvrez la PR dans le navigateur (`gh pr view --web`) pour consulter le diff, les
 
 ```bash
 gh pr merge --rebase --delete-branch
-git checkout main
-git pull
 ```
 
 Votre score sur GitHub Actions augmente à chaque exercice terminé. Vous pouvez maintenant passer à l'exercice suivant en reprenant à l'étape 1.
@@ -388,8 +385,6 @@ Quand vous avez consulté la PR, mergez-la et revenez sur `main` :
 
 ```bash
 gh pr merge --rebase --delete-branch
-git checkout main
-git pull
 ```
 
 Votre exercice 1 est maintenant intégré dans `main`.
@@ -510,8 +505,9 @@ Puis activez et implémentez les tests **un par un**, dans l'ordre :
 1. **`laFenetreEstVisible`** - le Stage doit être affiché (pensez à `show()`, comme dans l'exercice 1).
 2. **`leTitreEstDefini`** - le titre de la fenêtre doit être exactement `"Ma fenêtre personnalisée"`. Consultez la méthode `setTitle()` de `Stage`.
 3. **`lesDimensionsSontDefinies`** - la fenêtre doit faire 500 pixels de large et 300 pixels de haut. Consultez `setWidth()` et `setHeight()`.
-4. **`laFenetreNestPasRedimensionnable`** - la fenêtre ne doit pas pouvoir être redimensionnée. Consultez `setResizable()`.
-5. **`leStyleEstUndecorated`** - la fenêtre doit avoir le style `StageStyle.UNDECORATED` (sans barre de titre ni bordures). Consultez `initStyle()`.
+4. **`leStyleEstUndecorated`** - la fenêtre doit avoir le style `StageStyle.UNDECORATED` (sans barre de titre ni bordures). Consultez `initStyle()`.
+5. **`laFenetreNestPasRedimensionnable`** - la fenêtre ne doit pas pouvoir être redimensionnée. Consultez `setResizable()`.
+
 
 > [!WARNING]
 > `initStyle()` doit être appelé **avant** `show()`, sinon JavaFX lève une exception. L'ordre des instructions dans `start()` compte.
@@ -532,8 +528,6 @@ Consultez la PR (diff, CI, review Copilot), puis mergez et revenez sur `main` :
 
 ```bash
 gh pr merge --rebase --delete-branch
-git checkout main
-git pull
 ```
 
 Vérifiez votre score sur l'onglet **Actions** de votre dépôt GitHub. Il devrait avoir augmenté.
@@ -643,8 +637,6 @@ Consultez la PR, puis mergez :
 
 ```bash
 gh pr merge --rebase --delete-branch
-git checkout main
-git pull
 ```
 
 Vérifiez votre score sur l'onglet **Actions**. Il devrait avoir augmenté.
@@ -762,8 +754,6 @@ Consultez la PR, puis mergez :
 
 ```bash
 gh pr merge --rebase --delete-branch
-git checkout main
-git pull
 ```
 
 Vérifiez votre score sur l'onglet **Actions**.
@@ -952,8 +942,6 @@ Consultez la PR, puis mergez :
 
 ```bash
 gh pr merge --rebase --delete-branch
-git checkout main
-git pull
 ```
 
 Vérifiez votre score sur l'onglet **Actions**. Il devrait avoir augmenté.
@@ -1080,7 +1068,7 @@ Quand les 10 tests sont verts :
 git add .
 git commit -m "Exercice 6 terminé"
 git push -u origin exercice6
-gh pr create --title "Exercice 6 terminé" --body "Les 10 tests passent. TP1 terminé !"
+gh pr create --title "Exercice 6 terminé" --body "Les 10 tests passent. TP1 terminé."
 gh pr view --web
 ```
 
@@ -1088,8 +1076,6 @@ Consultez la PR, puis mergez :
 
 ```bash
 gh pr merge --rebase --delete-branch
-git checkout main
-git pull
 ```
 
 Vérifiez votre score sur l'onglet **Actions**. Si tous les exercices sont terminés, votre score devrait être de **1000/1000** (soit 20/20 une fois ramené sur 20). Bravo, le TP1 est terminé !
@@ -1275,8 +1261,6 @@ Consultez la PR, puis mergez :
 
 ```bash
 gh pr merge --rebase --delete-branch
-git checkout main
-git pull
 ```
 
 ---
@@ -1482,8 +1466,6 @@ Consultez la PR, puis mergez :
 
 ```bash
 gh pr merge --rebase --delete-branch
-git checkout main
-git pull
 ```
 
 ---
