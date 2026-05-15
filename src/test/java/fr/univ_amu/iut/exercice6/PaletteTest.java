@@ -8,7 +8,6 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.testfx.api.FxRobot;
@@ -29,7 +28,6 @@ class PaletteTest {
 
   // --- Étape 1 : afficher la fenêtre ---
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void laFenetreEstVisible(FxRobot robot) {
     assertThat(stage.isShowing())
@@ -39,7 +37,6 @@ class PaletteTest {
 
   // --- Étape 2 : créer une Scene ---
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void laSceneExiste(FxRobot robot) {
     assertThat(stage.getScene())
@@ -47,7 +44,6 @@ class PaletteTest {
         .isNotNull();
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void laRacineEstUnBorderPane(FxRobot robot) {
     assertThat(stage.getScene().getRoot())
@@ -57,7 +53,6 @@ class PaletteTest {
 
   // --- Étape 3 : ajouter les trois boutons ---
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void lesTroisBoutonsExistent(FxRobot robot) {
     Button btnRouge = robot.lookup("#btn-rouge").queryAs(Button.class);
@@ -73,7 +68,6 @@ class PaletteTest {
     assertThat(btnBleu.getText()).as("le bouton #btn-bleu doit afficher 'Bleu'").isEqualTo("Bleu");
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void leHBoxDesBoutonsEstEnHaut(FxRobot robot) {
     BorderPane root = (BorderPane) stage.getScene().getRoot();
@@ -89,7 +83,6 @@ class PaletteTest {
 
   // --- Étape 4 : ajouter la zone de couleur ---
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void laZoneDeCouleurExiste(FxRobot robot) {
     Pane zone = robot.lookup("#zone").queryAs(Pane.class);
@@ -98,14 +91,12 @@ class PaletteTest {
 
   // --- Étape 5 : ajouter le label des compteurs ---
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void leLabelCompteursExiste(FxRobot robot) {
     Label compteurs = robot.lookup("#compteurs").queryAs(Label.class);
     assertThat(compteurs).as("un Label avec l'id 'compteurs' doit être présent en bas").isNotNull();
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void leLabelCompteursEstEnBas(FxRobot robot) {
     BorderPane root = (BorderPane) stage.getScene().getRoot();
@@ -115,7 +106,6 @@ class PaletteTest {
         .isSameAs(compteurs);
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void leTexteInitialDesCompteurs(FxRobot robot) {
     Label compteurs = robot.lookup("#compteurs").queryAs(Label.class);
@@ -128,7 +118,6 @@ class PaletteTest {
 
   // --- Étape 6 : cliquer Rouge change la couleur de fond ---
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void cliquerRougeMetLaZoneEnRouge(FxRobot robot) {
     Button btnRouge = robot.lookup("#btn-rouge").queryAs(Button.class);
@@ -141,7 +130,6 @@ class PaletteTest {
 
   // --- Étape 7 : cliquer Vert change la couleur de fond ---
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void cliquerVertMetLaZoneEnVert(FxRobot robot) {
     Button btnVert = robot.lookup("#btn-vert").queryAs(Button.class);
@@ -154,7 +142,6 @@ class PaletteTest {
 
   // --- Étape 8 : cliquer Bleu change la couleur de fond ---
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void cliquerBleuMetLaZoneEnBleu(FxRobot robot) {
     Button btnBleu = robot.lookup("#btn-bleu").queryAs(Button.class);
@@ -167,7 +154,6 @@ class PaletteTest {
 
   // --- Étape 9 : cliquer incrémente le compteur correspondant ---
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void cliquerIncrementeLeCompteurCorrespondant(FxRobot robot) {
     Button btnVert = robot.lookup("#btn-vert").queryAs(Button.class);
@@ -182,7 +168,6 @@ class PaletteTest {
 
   // --- Étape 10 : les compteurs sont indépendants ---
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void lesCompteursSontIndependants(FxRobot robot) {
     Button btnRouge = robot.lookup("#btn-rouge").queryAs(Button.class);
